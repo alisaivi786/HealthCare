@@ -1,0 +1,42 @@
+﻿namespace Common.Jwt;
+public class AuthClaim
+{
+    public string Issuer { get; set; } = string.Empty;
+    public string Subject { get; set; } = string.Empty;
+    public string Audience { get; set; } = string.Empty;
+    public string ExpirationTime { get; set; } = string.Empty;
+    public string NotBefore { get; set; } = string.Empty;
+    public string IssuedAt { get; set; } = string.Empty;
+    public string JwtId { get; set; } = string.Empty;
+    public string CurrentUserId { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
+    public string GivenName { get; set; } = string.Empty;
+    public string FamilyName { get; set; } = string.Empty;
+    public string MiddleName { get; set; } = string.Empty;
+    public string Nickname { get; set; } = string.Empty;
+    public string PreferredUsername { get; set; } = string.Empty;
+    public string Profile { get; set; } = string.Empty;
+    public string Picture { get; set; } = string.Empty;
+    public string Website { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
+    public string EmailVerified { get; set; } = string.Empty;
+    public string Gender { get; set; } = string.Empty;
+    public string Birthdate { get; set; } = string.Empty;
+    public string Zoneinfo { get; set; } = string.Empty;
+    public string Locale { get; set; } = string.Empty;
+    public string PhoneNumber { get; set; } = string.Empty;
+    public string PhoneNumberVerified { get; set; } = string.Empty;
+    public string Address { get; set; } = string.Empty;
+    public string UpdatedAt { get; set; } = string.Empty;
+    public string Role { get; set; } = string.Empty;
+    public string Groups { get; set; } = string.Empty;
+    public string Permissions { get; set; } = string.Empty;
+    public string Custom1 { get; set; } = string.Empty;
+    public string Custom2 { get; set; } = string.Empty;
+    public string Custom3 { get; set; } = string.Empty;
+    public string Custom4 { get; set; } = string.Empty;
+    public string Custom5 { get; set; } = string.Empty;
+    public string Custom6 { get; set; } = string.Empty;
+    public string Custom7 { get; set; } = string.Empty;
+    public string Custom8 { get; set; } = string.Empty;
+}
