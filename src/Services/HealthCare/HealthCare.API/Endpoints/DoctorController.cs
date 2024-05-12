@@ -46,8 +46,9 @@ namespace HealthCare.API.Endpoints
         [HttpGet("doctor-list")]
         public IActionResult GetDoctorList()
         {
-
-            return Ok(DoctorService.GetDoctorDetails());
+            var response = DoctorService.GetDoctorDetails();
+            logger.LogInformation("Doctor-Details", response);
+            return Ok(response);
         }
         #endregion
     }

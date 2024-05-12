@@ -37,6 +37,7 @@ public class UserService(IMapper mapper) : IUserService
         };
 
         var res = mapper.Map<List<UserResponse>>(userEntity);
+        
         return res;
     }
 }
