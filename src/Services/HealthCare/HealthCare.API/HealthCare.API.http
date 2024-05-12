@@ -1,0 +1,9 @@
+@HealthCare_HostAddress = https://localhost:7012
+
+Post {{HealthCare_HostAddress}}/api/Account/Login/
+Accept: application/json
+
+###
+
+Get {{HealthCare_HostAddress}}/api/user/user-list/
+Accept: application/json
