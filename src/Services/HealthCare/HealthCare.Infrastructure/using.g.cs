@@ -3,3 +3,7 @@ global using Microsoft.Extensions.DependencyInjection;
 global using HealthCare.Infrastructure.Services;
 global using AutoMapper;
 global using HealthCare.Infrastructure.DI.Services;
+global using Common.Jwt;
+global using Common.Jwt.Interface;
+global using HealthCare.Common.Models.Dtos.Response.Doctor;
+global using HealthCare.Domain.Doctor;

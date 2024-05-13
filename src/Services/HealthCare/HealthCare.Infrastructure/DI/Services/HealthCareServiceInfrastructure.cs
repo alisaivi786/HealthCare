@@ -1,9 +1,9 @@
-﻿using System.Reflection;
+﻿using Microsoft.Extensions.Configuration;
 
 namespace HealthCare.Infrastructure.DI.Services;
-public static class HealthCareServiceExtension
+public static class HealthCareServiceInfrastructure
 {
-    public static IServiceCollection AddHealthCareService(this IServiceCollection services)
+    public static IServiceCollection AddHealthCareInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         AddCommunicationService(services);
         AddDBService(services);

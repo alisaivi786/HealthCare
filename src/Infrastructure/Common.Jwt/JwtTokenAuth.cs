@@ -1,7 +1,10 @@
-﻿namespace Common.Jwt;
-public static class JwtTokenAuth
+﻿using Common.Jwt.Identity;
+using System.Text;
+
+namespace Common.Jwt;
+public class JwtTokenAuth(IJwtConfig jwtConfig)
 {
-    public static string GenerateJwtToken(AuthClaim authClaim, string Secretbase64Key = "Wwp7CiJBdXRob3IiOiBBTEksCiJBcHAiOiAiSGVhbHRoQ2FyZSIsCiJUeXBlIjoiQXBpIiwKIkVtYWlsIjoiYWxpc2Fpdmk3ODZAZ21haWwuY29tIiwKIlNlY3JldGVLZXkiOiJhc2RmZ2hqa2wwOTg3NjU0MzIxIgp9Cl0=")
+    public string GenerateJwtToken(AuthClaim authClaim)
     {
         var claims = new List<Claim>();
         
@@ -13,22 +16,29 @@ public static class JwtTokenAuth
             {
                 claims.Add(new Claim(property.Name, value));
             }
-        } 
+        }
         #endregion
 
+        var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtConfig.SecretKey));
+        var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+        var expValue = new DateTimeOffset(DateTime.Now.AddMinutes(Convert.ToInt32(jwtConfig.TokenTime))).ToUnixTimeSeconds();
+
+        claims.Add(new(JwtRegisteredClaimNames.Iat, $"{new DateTimeOffset(DateTime.Now).ToUnixTimeSeconds()}"));
+        claims.Add(new(JwtRegisteredClaimNames.Nbf, $"{new DateTimeOffset(DateTime.Now).ToUnixTimeSeconds()}"));
+        claims.Add(new(JwtRegisteredClaimNames.Exp, $"{expValue}"));
+        claims.Add(new(new AuthClaim().Expiration, DateTime.Now.AddMinutes(Convert.ToInt32(jwtConfig.TokenTime)).ToString()));
+
+        var jwt = new JwtSecurityToken(
+               issuer: jwtConfig.Issuer,
+               audience: jwtConfig.Audience,
+               claims: claims,
+               signingCredentials: credentials
+           );
+
         var tokenHandler = new JwtSecurityTokenHandler();
-        var key = Encoding.ASCII.GetBytes(Secretbase64Key);
-
-        var tokenDescriptor = new SecurityTokenDescriptor
-        {
-            Subject = new ClaimsIdentity(claims),
-            Expires = DateTime.Now.AddMinutes(20),
-            Issuer = authClaim.Issuer,
-            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-        };
-
-        var token = tokenHandler.CreateToken(tokenDescriptor);
-        return tokenHandler.WriteToken(token);
+        var token = tokenHandler.WriteToken(jwt);
+        return token;
     }
 
 }

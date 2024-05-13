@@ -1,17 +1,17 @@
-using Common.Logging;
-using HealthCare.Infrastructure.DI.Services;
-using Microsoft.AspNetCore.Hosting;
-using Serilog;
-using System.Reflection;
+
+
+using HealthCare.API.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 DateTime startTime = DateTime.Now;
 // Add services to the container.
 
+IConfiguration configuration = builder.Configuration;
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddHealthCareService();
+builder.Services.AddHealthCareServices(configuration);
 builder.Services.AddAutoMapper(cfg =>
 {
     cfg.AddMaps(Assembly.Load("HealthCare.Application"));

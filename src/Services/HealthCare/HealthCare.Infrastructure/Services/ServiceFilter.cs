@@ -1,5 +1,6 @@
 ﻿namespace HealthCare.Infrastructure.Services;
 public class ServiceFilter
 {
-    public IMapper mapper = GlobalContext.GetService<IMapper>(); 
+    protected IMapper mapper = GlobalContext.GetService<IMapper>();
+    protected IClaimsAccessor CurrentUser = GlobalContext.GetService<IClaimsAccessor>(); 
 }

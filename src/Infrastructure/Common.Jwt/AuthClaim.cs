@@ -1,14 +1,14 @@
 ﻿namespace Common.Jwt;
 public class AuthClaim
 {
+    public string UserId { get; set; } = string.Empty;
+    public string UserName { get; set; } = string.Empty;
+    public string NickName { get; set; } = string.Empty;
+    public string UserPhoto { get; set; } = string.Empty;
+    public string PhoneType { get; set; } = string.Empty;
+    public string Isvalidator { get; set; } = string.Empty;
+    public string UserType { get; set; } = string.Empty;
     public string Issuer { get; set; } = string.Empty;
-    public string Subject { get; set; } = string.Empty;
-    public string Audience { get; set; } = string.Empty;
-    public string ExpirationTime { get; set; } = string.Empty;
-    public string NotBefore { get; set; } = string.Empty;
-    public string IssuedAt { get; set; } = string.Empty;
-    public string JwtId { get; set; } = string.Empty;
-    public string CurrentUserId { get; set; } = string.Empty;
     public string Name { get; set; } = string.Empty;
     public string GivenName { get; set; } = string.Empty;
     public string FamilyName { get; set; } = string.Empty;
@@ -31,6 +31,10 @@ public class AuthClaim
     public string Role { get; set; } = string.Empty;
     public string Groups { get; set; } = string.Empty;
     public string Permissions { get; set; } = string.Empty;
+    public string LoginTime { get; set; } = string.Empty;
+    public string LoginIPAddress { get; set; } = string.Empty;
+    public string TokenType { get; set; } = string.Empty;
+    public string Expiration { get; set; } = string.Empty;
     public string Custom1 { get; set; } = string.Empty;
     public string Custom2 { get; set; } = string.Empty;
     public string Custom3 { get; set; } = string.Empty;

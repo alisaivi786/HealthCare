@@ -2,3 +2,14 @@
 global using System.IdentityModel.Tokens.Jwt;
 global using System.Security.Claims;
 global using System.Text;
+global using System.Text.Json;
+global using Common.Extensions.String;
+global using Common.Extensions.Enum;
+global using Common.Jwt.Enum;
+global using Common.Jwt.Helpers;
+global using Common.Jwt.Interface;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.Extensions.Configuration;
+global using Common.Jwt.Identity;
+global using Microsoft.Extensions.DependencyInjection;

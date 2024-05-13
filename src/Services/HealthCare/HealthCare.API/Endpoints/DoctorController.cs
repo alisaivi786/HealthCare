@@ -4,8 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace HealthCare.API.Endpoints
 {
     [Route("api/[controller]")]
-    [ApiController]
-    public class DoctorController(ILogger<DoctorController> logger, IDoctorService doctorService) : ControllerBase
+    public class DoctorController(ILogger<DoctorController> logger, IDoctorService doctorService) : ApiBaseController
     {
         private readonly ILogger<DoctorController> logger = logger;
         private readonly IDoctorService DoctorService = doctorService;
@@ -47,6 +46,7 @@ namespace HealthCare.API.Endpoints
         public IActionResult GetDoctorList()
         {
             var response = DoctorService.GetDoctorDetails();
+            var av = CurrentUser.UserId;
             logger.LogInformation("Doctor-Details", response);
             return Ok(response);
         }

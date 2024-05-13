@@ -1,9 +1,4 @@
-﻿using AutoMapper;
-using HealthCare.Common.Models.Dtos.Response.Doctor;
-using HealthCare.Domain.Doctor;
-using System.Collections.Generic;
-
-namespace HealthCare.Infrastructure.Services;
+﻿namespace HealthCare.Infrastructure.Services;
 
 public class DoctorService : ServiceFilter, IDoctorService
 {
@@ -30,12 +25,11 @@ public class DoctorService : ServiceFilter, IDoctorService
 
     public List<DoctorDetailsResponse> GetDoctorDetails()
     {
-       
         List<DoctorEntity> list = new() { 
         
             new DoctorEntity()
             {
-                Name = "Ali"
+                Name = "Ali",
             },
             new DoctorEntity()
             {

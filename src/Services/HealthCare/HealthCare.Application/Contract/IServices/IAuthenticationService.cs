@@ -2,6 +2,6 @@
 
 public interface IAuthenticationService
 {
-    void AuthenticateUser();
+    object AuthenticateUser();
     void AuthorizeAccess();
 }

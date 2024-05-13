@@ -29,8 +29,8 @@ public class AccountController(ILogger<AccountController> logger, IAuthenticatio
     [HttpPost("Login")]
     public IActionResult Login()
     {
-        AuthService.AuthenticateUser();
-        return Ok("User Loged in!");
+        var response = AuthService.AuthenticateUser();
+        return Ok(response);
     } 
     #endregion
 }

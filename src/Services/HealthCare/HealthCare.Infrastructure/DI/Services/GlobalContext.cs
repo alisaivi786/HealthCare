@@ -1,6 +1,6 @@
 ﻿namespace HealthCare.Infrastructure.DI.Services;
 
-public static class GlobalContext
+public class GlobalContext
 {
     private static IServiceProvider _serviceProvider;
     public static void Initialize(IServiceProvider serviceProvider)
