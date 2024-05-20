@@ -1,4 +1,4 @@
-﻿namespace Common.Jwt.Middleware;
+﻿namespace Common.JWT.Extensions.DependencyInjection;
 
 public static class AuthRegistrarExtension
 {
@@ -7,8 +7,7 @@ public static class AuthRegistrarExtension
     /// <summary>
     /// AuthService
     /// Developer: ALI RAZA MUSHTAQ
-    /// Date: 13-May-2024
-    /// alisaivi786@gmail.com
+    /// aliraza_mushtaq@outlook.com
     /// </summary>
     /// <param name="services"></param> 
     #endregion

@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using HealthCare.Common.Models.Dtos.Response;
+﻿using HealthCare.Common.Models.Dtos.Response;
 using HealthCare.Domain.Person;
 
 namespace HealthCare.Infrastructure.Services;

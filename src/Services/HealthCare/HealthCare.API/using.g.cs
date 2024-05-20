@@ -1,11 +1,12 @@
 ﻿global using Microsoft.AspNetCore.Mvc;
 global using HealthCare.Application.Contract.IServices;
-global using Common.Jwt;
-global using Common.Jwt.Interface;
+
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
 global using Microsoft.IdentityModel.Tokens;
 global using System.Text;
-global using Common.Jwt.Middleware;
+global using Common.JWT.Extensions.DependencyInjection;
+global using Common.JWT;
+global using Common.JWT.Interface;
 global using HealthCare.Infrastructure.DI.Services;
 global using Common.Logging;
 global using Serilog;

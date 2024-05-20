@@ -1,4 +1,4 @@
-﻿namespace Common.Jwt.Middleware;
+﻿namespace Common.JWT.Extensions.DependencyInjection;
 
 public static class JWTAuthenticationExtension
 {
@@ -7,11 +7,10 @@ public static class JWTAuthenticationExtension
     /// <summary>
     /// AddJWTInfrastructure
     /// Developer: ALI RAZA MUSHTAQ
-    /// Date: 13-May-2024
-    /// alisaivi786@gmail.com
+    /// aliraza_mushtaq@outlook.com
     /// </summary>
     /// <param name="services"></param>
-    /// <param name="appSettings"></param> 
+    /// <param name="configuration"></param>
     #endregion
     public static void AddJWTInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {

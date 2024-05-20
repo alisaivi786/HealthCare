@@ -1,4 +1,4 @@
-﻿namespace Common.Jwt;
+﻿namespace Common.JWT;
 
 public class JwtConfig : IJwtConfig
 {

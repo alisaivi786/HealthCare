@@ -1,4 +1,4 @@
-﻿namespace Common.Jwt.Identity;
+﻿namespace Common.JWT.Identity;
 
 public class PrincipalAccessor(IHttpContextAccessor httpContextAccessor) : IPrincipalAccessor
 {

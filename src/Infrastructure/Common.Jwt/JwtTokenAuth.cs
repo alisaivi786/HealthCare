@@ -1,7 +1,4 @@
-﻿using Common.Jwt.Identity;
-using System.Text;
-
-namespace Common.Jwt;
+﻿namespace Common.JWT;
 public class JwtTokenAuth(IJwtConfig jwtConfig)
 {
     public string GenerateJwtToken(AuthClaim authClaim)

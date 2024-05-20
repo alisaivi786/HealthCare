@@ -1,4 +1,4 @@
-﻿namespace Common.Jwt.Helpers;
+﻿namespace Common.JWT.Helpers;
 
 public static class JwtHelpers
 {

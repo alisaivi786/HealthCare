@@ -1,6 +1,4 @@
-﻿using Common.Jwt.Enum;
-
-namespace Common.Jwt.Interface;
+﻿namespace Common.JWT.Interface;
 
 public interface IIdentityUser
 {

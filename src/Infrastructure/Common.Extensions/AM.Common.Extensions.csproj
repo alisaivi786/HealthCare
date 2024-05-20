@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <AssemblyVersion>8.0.0.0</AssemblyVersion>
+	  <FileVersion>8.0.0.0</FileVersion>
+	  <Title>AM Common Extension Pack</Title>
+	  <PackAsTool>False</PackAsTool>
+	  <Copyright>All Copy Rights Reserved by ALI MUSHTAQ</Copyright>
+	  <IncludeSymbols>True</IncludeSymbols>
+	  <Description>AM Common Extensions Library for String, Enums and Attribute</Description>
+	  <PackageTags>AM.Common.Extensions;</PackageTags>
+	  <PackageReleaseNotes>8.0.0.0</PackageReleaseNotes>
+	  <Version>8.0.0.0</Version>
+	  <RepositoryUrl>https://github.com/alisaivi786/AM.Common.Extensions</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>

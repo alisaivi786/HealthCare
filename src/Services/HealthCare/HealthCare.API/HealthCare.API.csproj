@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Infrastructure\Common.JWT.Extensions.DependencyInjection\Common.JWT.Extensions.DependencyInjection.csproj" />
     <ProjectReference Include="..\..\..\Infrastructure\Common.Logging\Common.Logging.csproj" />
     <ProjectReference Include="..\HealthCare.Infrastructure\HealthCare.Infrastructure.csproj" />
   </ItemGroup>

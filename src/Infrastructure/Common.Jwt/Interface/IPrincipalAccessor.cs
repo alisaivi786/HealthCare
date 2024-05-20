@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-namespace Common.Jwt.Interface;
+﻿namespace Common.JWT.Interface;
 
 public interface IPrincipalAccessor
 {
