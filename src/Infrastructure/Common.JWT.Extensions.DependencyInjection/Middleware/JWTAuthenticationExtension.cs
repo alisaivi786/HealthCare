@@ -1,4 +1,4 @@
-﻿namespace Common.JWT.Extensions.DependencyInjection;
+﻿namespace Common.JWT.Extensions.DependencyInjection.Middleware;
 
 public static class JWTAuthenticationExtension
 {
@@ -12,14 +12,9 @@ public static class JWTAuthenticationExtension
     /// <param name="services"></param>
     /// <param name="configuration"></param>
     #endregion
-    public static void AddJWTInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static void AddJWTInfrastructure(this IServiceCollection services, IJwtConfig jwtConfig)
     {
         #region ....
-
-        var jwtConfig = configuration.GetSection("JwtConfig").Get<JwtConfig>();
-
-        services.AddSingleton<IJwtConfig>(jwtConfig);
-
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {

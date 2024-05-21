@@ -18,8 +18,8 @@ public class UserService(IMapper mapper) : IUserService
 
     public List<UserResponse> GetUserDetails()
     {
-        List<UserEntity> userEntity = new()
-        {
+        List<UserEntity> userEntity =
+        [
             new UserEntity{
                 UserName = "Ali Raza Mushtaq",
                 Email = "alisaivi786@gmail.com",
@@ -33,7 +33,7 @@ public class UserService(IMapper mapper) : IUserService
                 CreatedBy = 1
             },
 
-        };
+        ];
 
         var res = mapper.Map<List<UserResponse>>(userEntity);
         

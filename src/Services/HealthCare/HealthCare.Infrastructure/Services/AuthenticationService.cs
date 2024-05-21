@@ -2,12 +2,10 @@
 
 namespace HealthCare.Infrastructure.Services;
 
-public class AuthenticationService(IJwtConfig jwtConfig) : IAuthenticationService
+public class AuthenticationService(IJwtConfig jwtConfig,IAuthClaim authClaim, IJwtTokenAuth jwtTokenAuth) : IAuthenticationService
 {
-    AuthClaim authClaim = new();
     public object AuthenticateUser()
     {
-        JwtTokenAuth jwtTokenAuth = new(jwtConfig);
         authClaim.UserId = "1";
         var token = jwtTokenAuth.GenerateJwtToken(authClaim: authClaim);
 

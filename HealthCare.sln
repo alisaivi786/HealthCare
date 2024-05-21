@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.Common.Extensions", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.JWT.Extensions.DependencyInjection", "src\Infrastructure\Common.JWT.Extensions.DependencyInjection\Common.JWT.Extensions.DependencyInjection.csproj", "{E41EB0AF-37EF-44B1-ABD4-A7971E1B7998}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.Code.Secrets", "src\Infrastructure\AM.Code.Secrets\AM.Code.Secrets.csproj", "{78E4B4C5-C0B1-4125-ABB0-62758788F50A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{E41EB0AF-37EF-44B1-ABD4-A7971E1B7998}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E41EB0AF-37EF-44B1-ABD4-A7971E1B7998}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E41EB0AF-37EF-44B1-ABD4-A7971E1B7998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78E4B4C5-C0B1-4125-ABB0-62758788F50A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E4B4C5-C0B1-4125-ABB0-62758788F50A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E4B4C5-C0B1-4125-ABB0-62758788F50A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E4B4C5-C0B1-4125-ABB0-62758788F50A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +100,7 @@ Global
 		{43421558-0E6D-47F0-A36C-1ECC70EBD762} = {FEE131FF-4EE6-47DF-AA39-FCF68AAF0CBC}
 		{B5CE9E94-F285-4A0C-A8AC-21E9F47FBF88} = {FEE131FF-4EE6-47DF-AA39-FCF68AAF0CBC}
 		{E41EB0AF-37EF-44B1-ABD4-A7971E1B7998} = {FEE131FF-4EE6-47DF-AA39-FCF68AAF0CBC}
+		{78E4B4C5-C0B1-4125-ABB0-62758788F50A} = {FEE131FF-4EE6-47DF-AA39-FCF68AAF0CBC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {186D9033-AAFD-4085-A1D2-3051A02E3C0C}

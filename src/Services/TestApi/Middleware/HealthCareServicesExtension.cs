@@ -1,6 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Common.JWT;
+using Common.JWT.Interface;
+using Common.JWT.Extensions.DependencyInjection.Middleware;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace HealthCare.API.Middleware;
+namespace Test.API.Middleware;
 
 public static class HealthCareServicesExtension
 {
@@ -15,7 +18,6 @@ public static class HealthCareServicesExtension
         services.AddSingleton<IJwtTokenAuth, JwtTokenAuth>();
         // Change AuthClaims Based on Your Project Needs
         services.AddSingleton<IAuthClaim, AuthClaim>();
-        services.AddHealthCareInfrastructure(configuration);
 
         #endregion
     }

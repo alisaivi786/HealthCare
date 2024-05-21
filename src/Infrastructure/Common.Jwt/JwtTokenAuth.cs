@@ -1,7 +1,7 @@
 ﻿namespace Common.JWT;
-public class JwtTokenAuth(IJwtConfig jwtConfig)
+public class JwtTokenAuth(IJwtConfig jwtConfig) : IJwtTokenAuth
 {
-    public string GenerateJwtToken(AuthClaim authClaim)
+    public string GenerateJwtToken(IAuthClaim authClaim)
     {
         var claims = new List<Claim>();
         

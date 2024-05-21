@@ -1,9 +1,9 @@
 ﻿namespace Common.JWT.Interface;
 
-public class IJwtConfig
+public interface IJwtConfig
 {
-    public string? SecretKey { get; set; }
-    public string? Issuer { get; set; }
-    public string? Audience { get; set; }
-    public string? TokenTime { get; set; }
+    public string? SecretKey { get; }
+    public string? Issuer { get; }
+    public string? Audience { get; }
+    public string? TokenTime { get; }
 }

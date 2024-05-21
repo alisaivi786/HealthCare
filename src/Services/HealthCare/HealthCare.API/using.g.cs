@@ -4,7 +4,7 @@ global using HealthCare.Application.Contract.IServices;
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
 global using Microsoft.IdentityModel.Tokens;
 global using System.Text;
-global using Common.JWT.Extensions.DependencyInjection;
+global using Common.JWT.Extensions.DependencyInjection.Middleware;
 global using Common.JWT;
 global using Common.JWT.Interface;
 global using HealthCare.Infrastructure.DI.Services;

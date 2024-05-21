@@ -1,5 +1,4 @@
-﻿using Common.Jwt.Interface;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 
 namespace HealthCare.API.Endpoints;

@@ -1,4 +1,4 @@
-﻿namespace Common.JWT.Extensions.DependencyInjection;
+﻿namespace Common.JWT.Extensions.DependencyInjection.Middleware;
 
 public static class AuthRegistrarExtension
 {
@@ -19,6 +19,7 @@ public static class AuthRegistrarExtension
         services.AddSingleton<IPrincipalAccessor, PrincipalAccessor>();
         services.AddSingleton<IIdentityUser, IdentityUser>();
         services.AddSingleton<IClaimsAccessor, ClaimsAccessor>();
+
         #endregion
     }
     #endregion

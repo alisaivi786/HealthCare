@@ -1,5 +1,5 @@
 ﻿namespace Common.JWT;
-public class AuthClaim
+public class AuthClaim : IAuthClaim
 {
     public string UserId { get; set; } = string.Empty;
     public string UserName { get; set; } = string.Empty;

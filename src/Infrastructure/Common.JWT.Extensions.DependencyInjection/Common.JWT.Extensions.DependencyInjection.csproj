@@ -5,21 +5,21 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	  <AssemblyVersion>8.0.0.0</AssemblyVersion>
-	  <FileVersion>8.0.0.0</FileVersion>
+	  <AssemblyVersion>8.0.0.1</AssemblyVersion>
+	  <FileVersion>8.0.0.1</FileVersion>
 	  <Title>Common JWT Extension Dependency Injection</Title>
 	  <PackAsTool>False</PackAsTool>
 	  <Copyright>All Copy Rights Reserved by ALI MUSHTAQ</Copyright>
 	  <IncludeSymbols>True</IncludeSymbols>
 	  <Description>Common JWT Extension Dependency Injection</Description>
 	  <PackageTags>Common.JWT.Extensions.DependencyInjection</PackageTags>
-	  <PackageReleaseNotes>8.0.0.0</PackageReleaseNotes>
-	  <Version>8.0.0.0</Version>
+	  <PackageReleaseNotes>8.0.0.1</PackageReleaseNotes>
+	  <Version>8.0.0.1</Version>
 	  <RepositoryUrl>https://github.com/alisaivi786/Common.JWT.Extensions.DependencyInjection</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Common.JWT" Version="8.0.0" />
+    <PackageReference Include="Common.JWT" Version="8.0.0.2" />
   </ItemGroup>
 
 </Project>
